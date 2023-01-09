@@ -77,7 +77,7 @@ def card_collector():
             # populates Url
             cards_url = 'https://www.tcgplayer.com/search/pokemon/product?productLineName=pokemon&page='+ str(i) +'&view=grid&ProductTypeName=Cards&RarityName=' + str(y)
             driver.get(cards_url)
-            time.sleep(2)
+            time.sleep(3)
 
             for x in range(1,25):
                 try:
@@ -204,29 +204,3 @@ def outputToCSV(pokemon_card, pokemon_card_url, pokemon_rarity, pokemon_set, pok
 if __name__ == '__main__':
     pokemon_card, pokemon_card_url, pokemon_rarity, pokemon_set, poke_card_market_value = card_collector()
     outputToCSV(pokemon_card, pokemon_card_url, pokemon_rarity, pokemon_set, poke_card_market_value)
-
-##############################################
-    ## First Entry on a Page
-    #/html/body/div[3]/div/div/section[2]/section/section/section/section/div[1]/div/a/section/span[3]
-
-    ## last Entry on a Page
-    #/html/body/div[3]/div/div/section[2]/section/section/section/section/div[24]/div/a/section/span[3]
-
-##############################################
-
-    ## Pokemon Card Title 
-    #/html/body/div[3]/div/div/section[2]/section/section/section/section/div[7]/div/a/section/span[3]
-
-    ## Rarity of card
-    #/html/body/div[3]/div/div/section[2]/section/section/section/section/div[7]/div/a/section/section[2]/span[1]
-
-    ## Pokemon Set Title
-    #/html/body/div[3]/div/div/section[2]/section/section/section/section/div[7]/div/a/section/span[2]
-
-    ## Number in that set 
-    #/html/body/div[3]/div/div/section[2]/section/section/section/section/div[7]/div/a/section/section[2]/span[3]
-
-    ## Market Price for Card
-    #/html/body/div[3]/div/div/section[2]/section/section/section/section/div[7]/div/a/section/section[3]/section/span[2]
-
-##############################################
